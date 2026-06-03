@@ -521,17 +521,80 @@
       color: var(--muted); font-size: 12px; flex-wrap: wrap; gap: 12px;
     }
 
-    /* RESPONSIVE */
+    /* RESPONSIVE — tablet */
     @media (max-width: 900px) {
       nav { padding: 16px 20px; }
       .nav-link { display: none; }
-      .hero { padding: 100px 20px 60px; }
-      .showcase { padding: 0 20px 60px; }
-      .bento { grid-template-columns: 1fr 1fr; }
-      .b1, .b2, .b3, .b4, .b5, .b6, .b7 { grid-column: span 2; }
-      .steps-row, .pkg-row { grid-template-columns: 1fr; }
+      .hero { padding: 110px 24px 60px; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn-w, .btn-o { width: 100%; max-width: 360px; justify-content: center; }
+      .showcase { padding: 0 16px 60px; }
+      .bento { grid-template-columns: 1fr; gap: 12px; }
+      .b1, .b2, .b3, .b4, .b5, .b6, .b7 { grid-column: span 1; }
+      .steps-row { grid-template-columns: 1fr; gap: 12px; }
+      .pkg-row { grid-template-columns: 1fr; gap: 16px; }
       .simple, .pricing, .cta-section { padding: 64px 20px; }
-      footer { padding: 24px 20px; flex-direction: column; }
+      .simple h2, .pricing h2 { letter-spacing: -1px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 8px; }
+      footer span:last-child { display: none; }
+    }
+
+    /* RESPONSIVE — mobile */
+    @media (max-width: 480px) {
+      nav { padding: 14px 16px; }
+      .logo { font-size: 18px; }
+      .nav-cta { font-size: 12px; padding: 8px 14px; }
+
+      .hero { padding: 100px 16px 48px; }
+      .pill { font-size: 11px; padding: 4px 12px; text-align: center; }
+      h1 { letter-spacing: -1.5px; }
+      .hero-sub { font-size: 15px; }
+      .btn-w, .btn-o { padding: 15px 24px; font-size: 15px; border-radius: 12px; min-height: 52px; }
+
+      .showcase { padding: 0 12px 48px; }
+      .bento { gap: 10px; }
+      .bento-cell { border-radius: 16px; }
+      .cell-title { font-size: 15px; padding: 4px 16px 14px; }
+      .cell-label { padding: 16px 16px 0; font-size: 10px; }
+
+      /* Shrink mocks on small screens */
+      .mock-ig-img { height: 130px; }
+      .mock-video-thumb { height: 150px; }
+      .mock-staging { height: 160px; }
+      .mock-stats { padding: 14px; gap: 8px; }
+      .mock-stat-row { padding: 10px 12px; }
+      .mock-stat-val { font-size: 15px; }
+      .mock-timeline { padding: 14px; }
+      .t-label { font-size: 12px; }
+      .mock-wa { margin: 0 14px 14px; }
+      .mock-ig { margin: 0 14px 14px; }
+      .mock-video { margin: 0 14px 14px; }
+      .mock-flyer { margin: 0 14px 14px; }
+
+      .simple { padding: 52px 16px; }
+      .simple h2 { letter-spacing: -1px; }
+      .simple-sub { font-size: 15px; }
+      .step-box { padding: 22px; }
+      .step-box h3 { font-size: 16px; }
+      .step-icon { font-size: 20px; top: 22px; right: 22px; }
+
+      .pricing { padding: 52px 16px; }
+      .pricing h2 { letter-spacing: -1px; }
+      .pkg { padding: 24px; border-radius: 16px; }
+      .pkg-price { font-size: 32px; }
+      .pkg-btn { padding: 14px; min-height: 50px; font-size: 14px; }
+
+      .cta-section { padding: 72px 16px; }
+      .cta-section h2 { letter-spacing: -1px; line-height: 1.0; }
+      .cta-section p { font-size: 15px; }
+      .cta-note { font-size: 11px; }
+
+      footer { padding: 20px 16px; }
+    }
+
+    /* Touch target safety */
+    @media (hover: none) {
+      .btn-w:hover, .btn-o:hover, .pkg-btn:hover, .nav-cta:hover { transform: none; box-shadow: none; }
     }
   </style>
 </head>
