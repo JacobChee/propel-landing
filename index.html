@@ -635,28 +635,34 @@
 <section class="showcase">
   <div class="bento">
 
-    <!-- B1: Instagram Post Mock -->
+    <!-- B1: Instagram Post -->
     <div class="bento-cell b1">
       <div class="cell-label">Social Content — live today</div>
       <div class="cell-title">Posted before your competitor wakes up.</div>
-      <div class="mock-ig">
-        <div class="mock-ig-header">
-          <div class="mock-avatar">JL</div>
-          <div>
-            <div class="mock-ig-name">jasonlim.property</div>
-            <div class="mock-ig-sub">PropNex Realty · Singapore</div>
+      <div class="mock-ig" id="b1-mock">
+        <img id="ig-post-img" src="assets/ig-post.jpg" alt="Sample Instagram post"
+          style="width:100%;border-radius:10px;display:none;"
+          onload="this.style.display='block';document.getElementById('b1-mock-inner').style.display='none';"
+          onerror="this.style.display='none';" />
+        <div id="b1-mock-inner">
+          <div class="mock-ig-header">
+            <div class="mock-avatar">JL</div>
+            <div>
+              <div class="mock-ig-name">jasonlim.property</div>
+              <div class="mock-ig-sub">PropNex Realty · Singapore</div>
+            </div>
           </div>
-        </div>
-        <div class="mock-ig-img">
-          <div class="mock-property-visual">
-            <div class="mock-prop-badge">FOR SALE</div>
-            <div class="mock-prop-price">S$1.28M</div>
-            <div class="mock-prop-addr">Bishan St 22 · 5-Room · High Floor</div>
+          <div class="mock-ig-img">
+            <div class="mock-property-visual">
+              <div class="mock-prop-badge">FOR SALE</div>
+              <div class="mock-prop-price">S$1.28M</div>
+              <div class="mock-prop-addr">Bishan St 22 · 5-Room · High Floor</div>
+            </div>
           </div>
-        </div>
-        <div class="mock-ig-caption">
-          <strong>Unobstructed city views from the 28th floor.</strong> Rare 5-room in Bishan with full renovation, 2 carpark lots included. First to enquire gets first look. 🔑<br/>
-          <span style="color:var(--gold)">#BiShan #PropNex #SingaporeProperty</span>
+          <div class="mock-ig-caption">
+            <strong>Unobstructed city views from the 28th floor.</strong> Rare 5-room in Bishan with full renovation, 2 carpark lots included. First to enquire gets first look. 🔑<br/>
+            <span style="color:var(--gold)">#BiShan #PropNex #SingaporeProperty</span>
+          </div>
         </div>
       </div>
     </div>
@@ -746,11 +752,18 @@
     <div class="bento-cell b4">
       <div class="cell-label">Virtual Staging — S$0 extra</div>
       <div class="cell-title">S$80/image elsewhere. Included here.</div>
-      <div class="mock-staging">
-        <div class="staging-before">
+      <div class="mock-staging" id="b4-staging">
+        <!-- Real images: drop staging-before.jpg and staging-after.jpg in /assets -->
+        <div class="staging-before" style="overflow:hidden;">
+          <img src="assets/staging-before.jpg" alt="Before staging"
+            style="width:100%;height:100%;object-fit:cover;display:none;"
+            onload="this.style.display='block';" onerror="this.style.display='none';" />
           <span class="staging-tag">Before</span>
         </div>
-        <div class="staging-after">
+        <div class="staging-after" style="overflow:hidden;">
+          <img src="assets/staging-after.jpg" alt="After staging"
+            style="width:100%;height:100%;object-fit:cover;display:none;"
+            onload="this.style.display='block';" onerror="this.style.display='none';" />
           <div class="sofa-shape"></div>
           <div class="table-shape"></div>
           <span class="staging-tag">After</span>
@@ -764,50 +777,70 @@
       <div class="cell-label">WhatsApp Scripts</div>
       <div class="cell-title">The right message at the right time closes deals.</div>
       <div class="mock-wa">
-        <div class="mock-wa-header">
-          <div class="wa-avatar">🏠</div>
-          <div>
-            <div class="wa-name">Jason · PropNex</div>
-            <div class="wa-status">Property Specialist</div>
+        <img src="assets/wa-screenshot.jpg" alt="WhatsApp broadcast"
+          style="width:100%;border-radius:0 0 10px 10px;display:none;"
+          onload="this.style.display='block';document.getElementById('b5-mock-inner').style.display='none';"
+          onerror="this.style.display='none';" />
+        <div id="b5-mock-inner">
+          <div class="mock-wa-header">
+            <div class="wa-avatar">🏠</div>
+            <div>
+              <div class="wa-name">Jason · PropNex</div>
+              <div class="wa-status">Property Specialist</div>
+            </div>
           </div>
-        </div>
-        <div class="mock-wa-body">
-          <div class="wa-bubble">
-            Hi [Name], a rare opportunity just came in — <strong>5-room Bishan with unobstructed views</strong>, fully renovated, S$1.28M.<br/><br/>Only showing to 3 qualified buyers this weekend. Are you still in the market?
-            <div class="wa-time">10:32 AM ✓✓</div>
+          <div class="mock-wa-body">
+            <div class="wa-bubble">
+              Hi [Name], a rare opportunity just came in — <strong>5-room Bishan with unobstructed views</strong>, fully renovated, S$1.28M.<br/><br/>Only showing to 3 qualified buyers this weekend. Are you still in the market?
+              <div class="wa-time">10:32 AM ✓✓</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- B6: Listing Video Mock -->
+    <!-- B6: Listing Video -->
     <div class="bento-cell b6">
       <div class="cell-label">Listing Video — delivered in 4 hours</div>
       <div class="cell-title">Your S$1,500 videographer. For S$380. Today.</div>
       <div class="mock-video">
-        <div class="mock-video-thumb">
-          <div class="play-btn"></div>
-          <div style="position:absolute;bottom:12px;left:14px;z-index:1">
-            <div style="font-size:13px;font-weight:800;color:#fff">Bishan St 22 · 5-Room</div>
-            <div style="font-size:10px;color:rgba(255,255,255,0.6)">S$1.28M · High Floor · Renovated</div>
+        <div class="mock-video-thumb" style="position:relative;">
+          <!-- Drop assets/listing-video.mp4 + assets/listing-thumb.jpg to activate -->
+          <video src="assets/listing-video.mp4" poster="assets/listing-thumb.jpg"
+            controls playsinline
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;border-radius:0;"
+            oncanplay="this.style.display='block';document.getElementById('b6-mock').style.display='none';"
+            onerror="this.style.display='none';"></video>
+          <div id="b6-mock" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+            <div class="play-btn"></div>
+            <div style="position:absolute;bottom:12px;left:14px;z-index:1">
+              <div style="font-size:13px;font-weight:800;color:#fff">Bishan St 22 · 5-Room</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.6)">S$1.28M · High Floor · Renovated</div>
+            </div>
+            <div style="position:absolute;top:12px;right:12px;z-index:1;background:rgba(0,0,0,0.5);padding:3px 8px;border-radius:4px;font-size:9px;font-weight:700;backdrop-filter:blur(4px)">1:02</div>
           </div>
-          <div style="position:absolute;top:12px;right:12px;z-index:1;background:rgba(0,0,0,0.5);padding:3px 8px;border-radius:4px;font-size:9px;font-weight:700;backdrop-filter:blur(4px)">1:02</div>
         </div>
         <div class="mock-video-meta">
           <div>
             <div class="mock-video-title">Full Property Walkthrough · AI-generated</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px">Delivered in 48h · Branded · CEA-compliant</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:2px">Delivered in 4 hours · Branded · CEA-compliant</div>
           </div>
           <div class="mock-video-tag">READY</div>
         </div>
       </div>
     </div>
 
-    <!-- B7: Flyer Mock -->
+    <!-- B7: Flyer -->
     <div class="bento-cell b7">
       <div class="cell-label">Open House Flyer</div>
       <div class="cell-title">Designed and done. Not in 3 days — now.</div>
-      <div class="mock-flyer">
+      <!-- Drop assets/flyer.jpg to replace CSS mock -->
+      <img src="assets/flyer.jpg" alt="Open House Flyer"
+        style="width:calc(100% - 40px);margin:0 20px 20px;border-radius:12px;display:none;"
+        onload="this.style.display='block';document.getElementById('b7-mock').style.display='none';"
+        onerror="this.style.display='none';" />
+      <div id="b7-mock" class="mock-flyer">
         <div class="flyer-price">S$1.28M</div>
         <div class="flyer-tag">Open House · Sat 10–12pm</div>
         <div class="flyer-title">Bishan St 22<br/>5-Room HDB</div>
