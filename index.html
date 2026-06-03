@@ -132,8 +132,8 @@
     .bento-cell:hover { border-color: var(--border2); }
 
     /* Layout */
-    .b1 { grid-column: span 5; }
-    .b2 { grid-column: span 7; }
+    .b1 { grid-column: span 6; }
+    .b2 { grid-column: span 6; }
     .b3 { grid-column: span 4; }
     .b4 { grid-column: span 4; }
     .b5 { grid-column: span 4; }
@@ -637,7 +637,7 @@
   <div class="bento">
 
     <!-- B1: Instagram Post -->
-    <div class="bento-cell b1">
+    <div class="bento-cell b1" style="height:620px;overflow:hidden;">
       <div class="cell-label">Social Content — live today</div>
       <div class="cell-title">Posted before your competitor wakes up.</div>
       <div class="mock-ig" id="b1-mock">
@@ -669,19 +669,22 @@
     </div>
 
     <!-- B2: Head-to-head comparison -->
-    <div class="bento-cell b2">
+    <div class="bento-cell b2" style="height:620px;overflow:hidden;display:flex;flex-direction:column;">
       <div class="cell-label">Speed = Commission</div>
       <div class="cell-title">Every hour your listing isn't up is a buyer seeing someone else's.</div>
-      <div style="display:grid;grid-template-columns:1fr 1px 1fr;gap:0;margin:0 20px 20px;">
 
-        <!-- Old way -->
-        <div style="padding:16px 20px 16px 0;display:flex;flex-direction:column;gap:16px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ef4444;">Traditional</div>
+      <!-- Big number comparison -->
+      <div style="display:grid;grid-template-columns:1fr 1px 1fr;flex:1;margin:0 20px 0;">
+
+        <!-- Traditional -->
+        <div style="padding:20px 20px 20px 0;display:flex;flex-direction:column;justify-content:space-between;">
           <div>
-            <div style="font-size:42px;font-weight:900;letter-spacing:-2px;color:#ef4444;line-height:1;">7</div>
-            <div style="font-size:13px;color:var(--muted);margin-top:2px;">days for a video</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ef4444;margin-bottom:12px;">Traditional</div>
+            <div style="font-size:88px;font-weight:900;letter-spacing:-4px;color:#ef4444;line-height:1;">7</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:4px;">days for a video</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;flex-direction:column;gap:12px;padding-bottom:20px;">
+            <div style="height:1px;background:var(--border);margin-bottom:4px;"></div>
             <div style="display:flex;justify-content:space-between;font-size:13px;">
               <span style="color:var(--muted);">Listing video</span>
               <span style="color:#ef4444;font-weight:600;">S$1,500</span>
@@ -705,13 +708,14 @@
         <div style="background:var(--border);"></div>
 
         <!-- Propel -->
-        <div style="padding:16px 0 16px 20px;display:flex;flex-direction:column;gap:16px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);">Propel</div>
+        <div style="padding:20px 0 20px 20px;display:flex;flex-direction:column;justify-content:space-between;">
           <div>
-            <div style="font-size:42px;font-weight:900;letter-spacing:-2px;color:var(--gold);line-height:1;">4</div>
-            <div style="font-size:13px;color:var(--muted);margin-top:2px;">hours, same day</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Propel</div>
+            <div style="font-size:88px;font-weight:900;letter-spacing:-4px;color:var(--gold);line-height:1;">4</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:4px;">hours, same day</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;flex-direction:column;gap:12px;padding-bottom:20px;">
+            <div style="height:1px;background:var(--border);margin-bottom:4px;"></div>
             <div style="display:flex;justify-content:space-between;font-size:13px;">
               <span style="color:var(--muted);">Listing video</span>
               <span style="color:var(--green);font-weight:600;">Included</span>
