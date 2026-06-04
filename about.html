@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — District10</title>
-  <meta name="description" content="We're the team behind atsell.io. We understand the agency business, and we're bringing tested AI marketing to Singapore property agents." />
+  <meta name="description" content="We're marketers who use AI. Built by the team behind atsell.io." />
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
@@ -21,7 +21,6 @@
       --gold2: #D4B36A;
       --border: #E8E4DC;
       --border2: #CEC9BE;
-      --green: #2D9E6B;
       --red: #C0392B;
       --red-dim: rgba(192,57,43,0.08);
     }
@@ -30,18 +29,11 @@
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; line-height: 1.5; }
 
     /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 48px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(247,244,239,0.92);
-      backdrop-filter: blur(16px);
-    }
-    .logo { font-family: 'DM Serif Display', serif; font-size: 22px; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; border-bottom: 1px solid var(--border); background: rgba(247,244,239,0.92); backdrop-filter: blur(16px); }
+    .logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--text); text-decoration: none; }
     .logo span { color: var(--gold); }
     .nav-right { display: flex; align-items: center; gap: 28px; }
-    .nav-link { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.15s; font-weight: 500; }
+    .nav-link { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.15s; }
     .nav-link:hover { color: var(--text); }
     .nav-link.active { color: var(--text); font-weight: 700; }
     .nav-cta { background: var(--text); color: var(--bg); font-size: 13px; font-weight: 700; padding: 9px 20px; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
@@ -49,80 +41,63 @@
 
     .overline { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
 
-    /* ABOUT HERO */
-    .about-hero {
-      padding: 160px 48px 100px;
-      max-width: 800px; margin: 0 auto;
-    }
-    .about-hero .overline { margin-bottom: 24px; display: block; }
-    .about-hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(40px, 6vw, 76px);
-      font-weight: 400; letter-spacing: -1px; line-height: 1.05;
-      margin-bottom: 28px;
-    }
-    .about-hero h1 em { font-style: italic; color: var(--gold); }
-    .about-hero p { font-size: 19px; color: var(--muted); line-height: 1.8; max-width: 620px; }
+    /* HERO */
+    .about-hero { padding: 160px 48px 80px; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center; }
+    .hero-text .overline { margin-bottom: 20px; display: block; }
+    .hero-text h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5.5vw, 70px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; margin-bottom: 20px; }
+    .hero-text h1 em { font-style: italic; color: var(--gold); }
+    .hero-text p { font-size: 17px; color: var(--muted); line-height: 1.75; max-width: 480px; }
+
+    /* Team photo slot */
+    .photo-slot { border: 2px dashed var(--border2); border-radius: 20px; background: var(--surface); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 40px 24px; color: var(--muted2); }
+    .photo-slot-icon { font-size: 28px; opacity: 0.35; }
+    .photo-slot-label { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .photo-slot-meta { font-size: 11px; color: var(--muted2); line-height: 1.6; }
 
     /* STORY */
-    .story { padding: 0 48px 100px; max-width: 800px; margin: 0 auto; }
-    .story-block {
-      padding: 52px 0;
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 56px; align-items: start;
-    }
+    .story { padding: 0 48px 80px; max-width: 800px; margin: 0 auto; }
+    .story-block { padding: 44px 0; border-top: 1px solid var(--border); display: grid; grid-template-columns: 160px 1fr; gap: 48px; align-items: start; }
     .story-label { font-size: 12px; color: var(--muted); line-height: 1.7; padding-top: 4px; }
     .story-label strong { display: block; font-size: 13px; color: var(--text); margin-bottom: 4px; font-weight: 700; }
-    .story-body h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 400; line-height: 1.2; margin-bottom: 18px;
-    }
+    .story-body h2 { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 2.8vw, 32px); font-weight: 400; line-height: 1.2; margin-bottom: 14px; }
     .story-body h2 em { font-style: italic; color: var(--gold); }
-    .story-body p { font-size: 16px; color: var(--muted); line-height: 1.9; margin-bottom: 16px; }
+    .story-body p { font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
     .story-body p:last-child { margin-bottom: 0; }
     .story-body p strong { color: var(--text); font-weight: 600; }
 
     /* PRINCIPLES */
-    .principles {
-      padding: 80px 48px;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
+    .principles { padding: 72px 48px; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .principles-inner { max-width: 800px; margin: 0 auto; }
-    .principles-header { margin-bottom: 48px; }
-    .principles-header .overline { margin-bottom: 14px; display: block; }
-    .principles-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; margin-bottom: 10px; }
-    .principles-header p { color: var(--muted); font-size: 16px; }
-    .principle-item { display: flex; gap: 28px; align-items: flex-start; padding: 28px 0; border-top: 1px solid var(--border); }
-    .principle-num { font-size: 13px; font-weight: 800; color: var(--gold); letter-spacing: 1px; flex-shrink: 0; padding-top: 3px; min-width: 24px; }
-    .principle-item h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .principle-item p { font-size: 15px; color: var(--muted); line-height: 1.85; }
+    .principles-header { margin-bottom: 40px; }
+    .principles-header .overline { margin-bottom: 12px; display: block; }
+    .principles-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 400; margin-bottom: 8px; }
+    .principles-header p { color: var(--muted); font-size: 15px; }
+    .principle-item { display: flex; gap: 24px; align-items: flex-start; padding: 24px 0; border-top: 1px solid var(--border); }
+    .principle-num { font-size: 12px; font-weight: 800; color: var(--gold); letter-spacing: 1px; flex-shrink: 0; padding-top: 2px; min-width: 24px; }
+    .principle-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .principle-item p { font-size: 14px; color: var(--muted); line-height: 1.8; }
 
-    /* WHAT WE DON'T DO */
-    .dont-section { padding: 80px 48px; max-width: 800px; margin: 0 auto; }
-    .dont-header { margin-bottom: 40px; }
-    .dont-header .overline { margin-bottom: 14px; display: block; }
-    .dont-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; margin-bottom: 10px; }
-    .dont-header p { color: var(--muted); font-size: 16px; }
-    .dont-list { display: flex; flex-direction: column; gap: 12px; }
-    .dont-item { display: flex; gap: 16px; align-items: flex-start; padding: 22px 24px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
-    .dont-x { width: 22px; height: 22px; border-radius: 50%; background: var(--red-dim); color: var(--red); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
-    .dont-text h4 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
-    .dont-text p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+    /* WHAT WE WON'T DO */
+    .dont-section { padding: 72px 48px; max-width: 800px; margin: 0 auto; }
+    .dont-header { margin-bottom: 32px; }
+    .dont-header .overline { margin-bottom: 12px; display: block; }
+    .dont-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 400; margin-bottom: 8px; }
+    .dont-header p { color: var(--muted); font-size: 15px; }
+    .dont-list { display: flex; flex-direction: column; gap: 10px; }
+    .dont-item { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+    .dont-x { width: 20px; height: 20px; border-radius: 50%; background: var(--red-dim); color: var(--red); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+    .dont-text h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .dont-text p { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
     /* CTA */
-    .cta-section { padding: 120px 48px; text-align: center; background: var(--text); }
-    .cta-section .overline { color: var(--gold); margin-bottom: 20px; display: block; }
-    .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 60px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; margin-bottom: 20px; color: var(--bg); }
+    .cta-section { padding: 100px 48px; text-align: center; background: var(--text); }
+    .cta-section .overline { color: var(--gold); margin-bottom: 16px; display: block; }
+    .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 5vw, 56px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; margin-bottom: 16px; color: var(--bg); }
     .cta-section h2 em { font-style: italic; color: var(--gold); }
-    .cta-section p { color: rgba(247,244,239,0.55); font-size: 16px; margin-bottom: 40px; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-    .btn-cta { background: var(--gold); color: #000; font-size: 15px; font-weight: 700; padding: 16px 32px; border-radius: 10px; text-decoration: none; transition: all 0.15s; display: inline-flex; align-items: center; gap: 8px; }
+    .cta-section p { color: rgba(247,244,239,0.5); font-size: 15px; margin-bottom: 36px; }
+    .btn-cta { background: var(--gold); color: #000; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.15s; }
     .btn-cta:hover { background: var(--gold2); transform: translateY(-1px); }
-    .cta-note { font-size: 12px; color: rgba(247,244,239,0.35); margin-top: 16px; }
+    .cta-note { font-size: 12px; color: rgba(247,244,239,0.3); margin-top: 14px; }
 
     /* FOOTER */
     footer { border-top: 1px solid rgba(247,244,239,0.1); padding: 28px 48px; background: var(--text); display: flex; align-items: center; justify-content: space-between; color: rgba(247,244,239,0.4); font-size: 12px; flex-wrap: wrap; gap: 12px; }
@@ -133,11 +108,11 @@
     @media (max-width: 900px) {
       nav { padding: 16px 20px; }
       .nav-link { display: none; }
-      .about-hero { padding: 120px 24px 64px; }
-      .story { padding: 0 24px 64px; }
-      .story-block { grid-template-columns: 1fr; gap: 16px; }
-      .principles, .dont-section { padding: 60px 20px; }
-      .cta-section { padding: 80px 20px; }
+      .about-hero { grid-template-columns: 1fr; gap: 40px; padding: 120px 24px 60px; }
+      .story { padding: 0 24px 60px; }
+      .story-block { grid-template-columns: 1fr; gap: 12px; }
+      .principles, .dont-section { padding: 56px 20px; }
+      .cta-section { padding: 72px 20px; }
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
 
@@ -146,18 +121,14 @@
       .logo { font-size: 18px; }
       .nav-cta { font-size: 12px; padding: 8px 14px; }
       .about-hero { padding: 100px 16px 48px; }
-      .about-hero h1 { letter-spacing: -0.5px; }
-      .about-hero p { font-size: 16px; }
+      .hero-text h1 { letter-spacing: -0.5px; }
       .story { padding: 0 16px 48px; }
-      .story-body p { font-size: 15px; }
       .principles, .dont-section { padding: 48px 16px; }
-      .cta-section { padding: 64px 16px; }
+      .cta-section { padding: 60px 16px; }
       footer { padding: 20px 16px; }
     }
 
-    @media (hover: none) {
-      .btn-cta:hover { transform: none; }
-    }
+    @media (hover: none) { .btn-cta:hover { transform: none; } }
   </style>
 </head>
 <body>
@@ -173,50 +144,57 @@
 </nav>
 
 <!-- HERO -->
-<section class="about-hero">
-  <span class="overline">About District10</span>
-  <h1>We're marketers.<br/>AI is just how<br/>we work <em>now.</em></h1>
-  <p>We didn't start with AI. We started with a deep understanding of how agencies grow — and then watched AI fundamentally change what's possible in marketing.</p>
-</section>
+<div class="about-hero">
+  <div class="hero-text">
+    <span class="overline">About District10</span>
+    <h1>We're marketers.<br/>AI is how<br/>we work <em>now.</em></h1>
+    <p>We didn't start with AI. We started with marketing — and watched AI change what's possible. District10 is us bringing the best of that to property agents.</p>
+  </div>
+
+  <!-- Team photo placeholder -->
+  <div class="photo-slot" style="height:340px;">
+    <div class="photo-slot-icon">📸</div>
+    <div class="photo-slot-label">Team photo</div>
+    <div class="photo-slot-meta">A photo of the founders / team<br/>Recommended: 760 × 680px<br/>JPG or PNG</div>
+  </div>
+</div>
 
 <!-- STORY -->
 <section class="story">
 
   <div class="story-block">
     <div class="story-label">
-      <strong>Where we started</strong>
-      atsell.io · Marketing
+      <strong>Where we came from</strong>
+      atsell.io · Ecommerce marketing
     </div>
     <div class="story-body">
-      <h2>We started in marketing. We never <em>left.</em></h2>
-      <p>Before District10, we built atsell.io — an ecommerce marketing agency. That work taught us what actually makes marketing perform: clear positioning, content that converts, and the discipline to test everything before you scale it.</p>
-      <p><strong>We're not a tech company that decided to do marketing.</strong> We're marketers who got very good at using technology. Property is a new vertical for us — but knowing how to make content that drives action is not.</p>
+      <h2>We ran marketing before we ran <em>AI.</em></h2>
+      <p>We built atsell.io — an ecommerce marketing agency. That taught us what actually makes content perform: clear positioning, copy that converts, and the discipline to test before you scale.</p>
+      <p><strong>We're not AI engineers who decided to do marketing.</strong> We're marketers who got very good at using AI.</p>
     </div>
   </div>
 
   <div class="story-block">
     <div class="story-label">
-      <strong>What changed</strong>
-      2023–2024 · The AI shift
+      <strong>Why property</strong>
+      The gap we saw
     </div>
     <div class="story-body">
-      <h2>AI changed what's possible. Most agents are being <em>left behind.</em></h2>
-      <p>AI didn't just make things faster — it fundamentally changed the cost structure of high-quality marketing. What used to require a videographer, a staging company, a social media manager, and a copywriter can now be done by a small team with the right tools.</p>
-      <p>But most agents are either ignoring it entirely, or being sold bad AI — generic captions, robotic videos, digital avatars that undermine the trust they've spent years building.</p>
-      <p><strong>We saw the gap.</strong> Good operators who deserved better marketing, being failed by both traditional vendors (too slow, too expensive) and AI tools (too generic, too risky to put your name on).</p>
+      <h2>Good agents were being <em>left behind.</em></h2>
+      <p>Traditional vendors are too slow and too expensive. Most AI tools produce content that looks generic at best, and damaging at worst — fake avatars, robotic captions, zero CEA awareness.</p>
+      <p>District10 exists because agents deserve better than both.</p>
     </div>
   </div>
 
   <div class="story-block">
     <div class="story-label">
-      <strong>What makes us different</strong>
-      The thing we do first
+      <strong>How we stay sharp</strong>
+      The test-first rule
     </div>
     <div class="story-body">
       <h2>We test everything before we <em>use</em> it.</h2>
-      <p>We've evaluated over 40 AI tools across video generation, image staging, copywriting, and ad creative. Most of them aren't ready for client work. Some of them are. We only use the ones that clear our bar — and that bar is simple: <strong>would we put our name on this?</strong></p>
-      <p>Every tool we use on your listings, we've tested on our own. Every output that leaves our desk has been reviewed by a human who understands property marketing. That's not a process we're building — it's how we've operated from day one.</p>
-      <p>We are at the forefront of AI marketing technology because we invest in staying there. But being first doesn't mean being reckless. It means you get access to what actually works, not what's just new.</p>
+      <p>We've evaluated 40+ AI tools. Most aren't ready for client work. The ones we use have cleared our bar first — would we put our name on this?</p>
+      <p>Being at the forefront means knowing what to adopt and what to leave behind.</p>
     </div>
   </div>
 
@@ -228,66 +206,66 @@
     <div class="principles-header">
       <span class="overline">How we work</span>
       <h2>Three things we won't compromise on.</h2>
-      <p>These aren't values on a wall. They're how we make decisions when it's easier not to.</p>
+      <p>Not values on a wall. How we make decisions.</p>
     </div>
     <div class="principle-item">
       <div class="principle-num">01</div>
       <div>
         <h3>Human review on every deliverable</h3>
-        <p>AI handles production speed. We handle quality. Every video, staging image, caption, and script is reviewed before it reaches you — not because we don't trust the tools, but because your name goes on it, not ours. If it's not good enough to close a deal, it doesn't leave our desk.</p>
+        <p>AI handles speed. We handle quality. Your name goes on it — not ours. If it's not good enough to close a deal, it doesn't leave.</p>
       </div>
     </div>
     <div class="principle-item">
       <div class="principle-num">02</div>
       <div>
         <h3>Property is a long-term trust business</h3>
-        <p>Clients choose agents because they trust them. Nothing we produce should undermine that trust — not now, not three years from now when a potential client searches your name. Content that builds short-term reach but damages long-term credibility isn't marketing. It's a liability. We won't produce it.</p>
+        <p>Clients choose agents because they trust them. Content that builds short-term reach but damages long-term credibility isn't marketing — it's a liability.</p>
       </div>
     </div>
     <div class="principle-item">
       <div class="principle-num">03</div>
       <div>
         <h3>We test before we sell</h3>
-        <p>No tool, workflow, or output format goes near a client listing until it's cleared our internal bar. We run every new AI capability through our own work first. If we wouldn't use it ourselves, we don't offer it. Being at the forefront means knowing what to adopt — and what to leave behind.</p>
+        <p>No tool goes near a client listing until it's cleared internally. You're not paying to be an experiment.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE DON'T DO -->
+<!-- WHAT WE WON'T DO -->
 <section class="dont-section">
   <div class="dont-header">
     <span class="overline">Where we draw the line</span>
     <h2>What we won't do.</h2>
-    <p>Being AI-first means making deliberate choices about where AI belongs — and where it doesn't.</p>
+    <p>AI-first means making deliberate choices about where AI belongs — and where it doesn't.</p>
   </div>
   <div class="dont-list">
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
         <h4>No AI-generated agent avatars or digital personas</h4>
-        <p>Property transactions run on trust. An agent's face and name carry years of relationship capital. We will not produce fake digital versions of you, regardless of how convincing the technology gets. Your identity is not a marketing asset we get to automate.</p>
+        <p>Your face and name carry years of trust. We will not automate them.</p>
       </div>
     </div>
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
         <h4>No templated content that makes you look like every other agent</h4>
-        <p>The point of marketing is differentiation. Every deliverable is produced for your specific listing, your specific buyer profile, your specific voice — not pulled from a template library and swapped with your name at the top.</p>
+        <p>Every deliverable is written for your listing, your buyer, your voice.</p>
       </div>
     </div>
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
-        <h4>No content that hasn't been reviewed for CEA compliance</h4>
-        <p>Your licence is not worth a faster turnaround. Every piece of content we produce is checked against CEA guidelines before it leaves our desk. No exceptions, no shortcuts.</p>
+        <h4>No shortcuts on CEA compliance</h4>
+        <p>Every piece is checked before it leaves. Your licence is not worth a faster turnaround.</p>
       </div>
     </div>
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
-        <h4>No using a tool on clients that we haven't tested ourselves</h4>
-        <p>We don't beta test on your listings. If a new AI tool or workflow hasn't cleared our internal quality bar, it doesn't get used on client work. Period. You're not paying to be an experiment.</p>
+        <h4>No untested tools on client work</h4>
+        <p>If it hasn't cleared our internal bar, it doesn't touch a listing. Period.</p>
       </div>
     </div>
   </div>
@@ -297,12 +275,12 @@
 <section class="cta-section">
   <span class="overline">Ready to see it?</span>
   <h2>Send us one listing.<br/>We'll show you what <em>good</em> looks like.</h2>
-  <p>First listing kit is free. No commitment, no briefing call. Just WhatsApp us the listing and we'll deliver the full kit in 4 hours.</p>
+  <p>First listing kit is free. No commitment. Just WhatsApp.</p>
   <a href="https://wa.me/6597121217?text=Hi%2C%20I'd%20like%20a%20free%20listing%20kit%20from%20District10" class="btn-cta" target="_blank">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.86L.057 23.986l6.304-1.654A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.804a9.793 9.793 0 01-5.012-1.374l-.36-.214-3.732.979 1-3.634-.234-.374A9.804 9.804 0 012.196 12C2.196 6.57 6.57 2.196 12 2.196c5.43 0 9.804 4.374 9.804 9.804 0 5.43-4.374 9.804-9.804 9.804z"/></svg>
     WhatsApp your listing — it's free
   </a>
-  <div class="cta-note">Replied within 2 hours · Mon–Sat 9am–9pm SGT · First listing kit free</div>
+  <div class="cta-note">Replied within 2 hours · Mon–Sat 9am–9pm SGT</div>
 </section>
 
 <!-- FOOTER -->

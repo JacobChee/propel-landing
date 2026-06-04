@@ -32,14 +32,11 @@
       --muted2: #A8A099;
       --gold: #C4A35A;
       --gold2: #D4B36A;
-      --golddim: rgba(196,163,90,0.12);
       --border: #E8E4DC;
       --border2: #CEC9BE;
       --green: #2D9E6B;
-      --green-dim: rgba(45,158,107,0.1);
       --red: #C0392B;
       --red-dim: rgba(192,57,43,0.08);
-      /* dark vars for deliverable mocks */
       --dk: #08080a;
       --dk-card: #141418;
       --dk-border: #222228;
@@ -58,102 +55,40 @@
       background: rgba(247,244,239,0.92);
       backdrop-filter: blur(16px);
     }
-    .logo { font-family: 'DM Serif Display', serif; font-size: 22px; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
+    .logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--text); text-decoration: none; }
     .logo span { color: var(--gold); }
     .nav-right { display: flex; align-items: center; gap: 28px; }
-    .nav-link { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.15s; font-weight: 500; }
+    .nav-link { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.15s; }
     .nav-link:hover { color: var(--text); }
-    .nav-cta {
-      background: var(--text); color: var(--bg);
-      font-size: 13px; font-weight: 700;
-      padding: 9px 20px; border-radius: 8px;
-      text-decoration: none; transition: background 0.15s;
-    }
+    .nav-cta { background: var(--text); color: var(--bg); font-size: 13px; font-weight: 700; padding: 9px 20px; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
     .nav-cta:hover { background: #2c2820; }
 
     /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: grid; place-items: center;
-      padding: 140px 48px 100px;
-      text-align: center;
-    }
-    .hero-inner { max-width: 860px; }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      border: 1px solid var(--border2); border-radius: 100px;
-      padding: 6px 16px; font-size: 12px; color: var(--muted);
-      margin-bottom: 32px; font-weight: 500; background: var(--surface);
-    }
+    .hero { min-height: 100vh; display: grid; place-items: center; padding: 140px 48px 100px; text-align: center; }
+    .hero-inner { max-width: 820px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border2); border-radius: 100px; padding: 6px 16px; font-size: 12px; color: var(--muted); margin-bottom: 32px; font-weight: 500; background: var(--surface); }
     .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(44px, 7vw, 88px);
-      font-weight: 400; letter-spacing: -1px; line-height: 1.0;
-      margin-bottom: 28px; color: var(--text);
-    }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(44px, 7vw, 88px); font-weight: 400; letter-spacing: -1px; line-height: 1.0; margin-bottom: 24px; }
     h1 em { font-style: italic; color: var(--gold); }
     h1 .dim { color: var(--muted2); }
-    .hero-sub {
-      font-size: 18px; color: var(--muted); font-weight: 400;
-      max-width: 500px; margin: 0 auto 40px; line-height: 1.8;
-    }
+    .hero-sub { font-size: 18px; color: var(--muted); max-width: 460px; margin: 0 auto 40px; line-height: 1.7; }
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--text); color: var(--bg);
-      font-size: 15px; font-weight: 700;
-      padding: 14px 30px; border-radius: 10px;
-      text-decoration: none; transition: all 0.15s;
-      display: flex; align-items: center; gap: 8px;
-    }
+    .btn-primary { background: var(--text); color: var(--bg); font-size: 15px; font-weight: 700; padding: 14px 30px; border-radius: 10px; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.15s; }
     .btn-primary:hover { background: #2c2820; transform: translateY(-1px); }
-    .btn-secondary {
-      background: transparent; color: var(--text);
-      font-size: 15px; font-weight: 500;
-      padding: 14px 30px; border-radius: 10px;
-      text-decoration: none; border: 1px solid var(--border2);
-      transition: all 0.15s;
-    }
+    .btn-secondary { background: transparent; color: var(--text); font-size: 15px; font-weight: 500; padding: 14px 30px; border-radius: 10px; text-decoration: none; border: 1px solid var(--border2); transition: all 0.15s; }
     .btn-secondary:hover { border-color: var(--text); }
 
     /* TRUST BAR */
-    .trust-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      padding: 14px 48px;
-      display: flex; align-items: center; justify-content: center;
-      gap: 40px; flex-wrap: wrap;
-    }
-    .trust-item {
-      font-size: 12px; font-weight: 600; color: var(--muted);
-      display: flex; align-items: center; gap: 8px;
-    }
+    .trust-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); padding: 14px 48px; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { font-size: 12px; font-weight: 600; color: var(--muted); display: flex; align-items: center; gap: 8px; }
     .trust-item::before { content: '—'; color: var(--gold); }
 
     /* SHOWCASE */
-    .showcase {
-      padding: 80px 48px 100px;
-      max-width: 1240px; margin: 0 auto;
-    }
-    .section-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--muted);
-      margin-bottom: 40px; display: block;
-    }
+    .showcase { padding: 80px 48px 100px; max-width: 1240px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 40px; display: block; }
 
-    /* Bento — dark cards float on warm page */
-    .bento {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 16px; align-items: start;
-    }
-    .bento-cell {
-      background: var(--dk-card);
-      border: 1px solid var(--dk-border);
-      border-radius: 20px; overflow: hidden;
-      position: relative; transition: border-color 0.2s;
-    }
+    .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; align-items: start; }
+    .bento-cell { background: var(--dk-card); border: 1px solid var(--dk-border); border-radius: 20px; overflow: hidden; position: relative; transition: border-color 0.2s; }
     .bento-cell:hover { border-color: #3a3a48; }
 
     .b1 { grid-column: span 6; }
@@ -168,7 +103,7 @@
     .cell-title { font-size: 16px; font-weight: 600; color: #f0f0ec; padding: 6px 20px 16px; line-height: 1.4; }
 
     /* Mock: IG */
-    .mock-ig { margin: 0 20px 20px; background: var(--dk); border: 1px solid var(--dk-border); border-radius: 14px; overflow: hidden; font-size: 12px; }
+    .mock-ig { margin: 0 20px 20px; background: var(--dk); border: 1px solid var(--dk-border); border-radius: 14px; overflow: hidden; }
     .mock-ig-header { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid var(--dk-border); }
     .mock-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #6b4f1a); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #000; }
     .mock-ig-name { font-weight: 600; font-size: 12px; color: #f0f0ec; }
@@ -176,22 +111,8 @@
     .mock-ig-img { height: 160px; background: linear-gradient(135deg, #1a2a1a, #0d1a0d, #1a2a0d); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .mock-property-visual { width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%), linear-gradient(135deg, #1e3a2f, #0a1f15, #162d20); display: flex; flex-direction: column; justify-content: flex-end; padding: 12px; position: relative; }
     .mock-property-visual::before {
-      content: '';
-      position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
-      width: 180px; height: 100px;
-      background:
-        radial-gradient(circle 2px at 30px 20px, rgba(255,230,150,0.8) 0%, transparent 3px),
-        radial-gradient(circle 2px at 55px 20px, rgba(255,230,150,0.8) 0%, transparent 3px),
-        radial-gradient(circle 2px at 80px 20px, rgba(255,230,150,0.8) 0%, transparent 3px),
-        radial-gradient(circle 2px at 30px 40px, rgba(255,230,150,0.6) 0%, transparent 3px),
-        radial-gradient(circle 2px at 55px 40px, rgba(255,230,150,0.8) 0%, transparent 3px),
-        radial-gradient(circle 2px at 30px 60px, rgba(255,230,150,0.8) 0%, transparent 3px),
-        radial-gradient(circle 2px at 80px 60px, rgba(255,230,150,0.5) 0%, transparent 3px),
-        radial-gradient(circle 2px at 120px 25px, rgba(255,230,150,0.7) 0%, transparent 3px),
-        radial-gradient(circle 2px at 145px 25px, rgba(255,230,150,0.8) 0%, transparent 3px),
-        radial-gradient(circle 2px at 120px 50px, rgba(255,230,150,0.6) 0%, transparent 3px),
-        radial-gradient(circle 2px at 145px 50px, rgba(255,230,150,0.7) 0%, transparent 3px),
-        linear-gradient(180deg, #1a2e22 0%, #0d1a11 100%);
+      content: ''; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); width: 180px; height: 100px;
+      background: radial-gradient(circle 2px at 30px 20px, rgba(255,230,150,0.8) 0%, transparent 3px), radial-gradient(circle 2px at 55px 20px, rgba(255,230,150,0.8) 0%, transparent 3px), radial-gradient(circle 2px at 80px 20px, rgba(255,230,150,0.8) 0%, transparent 3px), radial-gradient(circle 2px at 30px 40px, rgba(255,230,150,0.6) 0%, transparent 3px), radial-gradient(circle 2px at 55px 40px, rgba(255,230,150,0.8) 0%, transparent 3px), radial-gradient(circle 2px at 30px 60px, rgba(255,230,150,0.8) 0%, transparent 3px), radial-gradient(circle 2px at 120px 25px, rgba(255,230,150,0.7) 0%, transparent 3px), radial-gradient(circle 2px at 145px 25px, rgba(255,230,150,0.8) 0%, transparent 3px), linear-gradient(180deg, #1a2e22 0%, #0d1a11 100%);
       clip-path: polygon(10% 100%, 10% 30%, 20% 30%, 20% 10%, 60% 10%, 60% 30%, 70% 30%, 70% 0%, 90% 0%, 90% 100%);
     }
     .mock-prop-badge { position: absolute; top: 10px; right: 10px; background: var(--gold); color: #000; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 4px; }
@@ -199,21 +120,6 @@
     .mock-prop-addr { font-size: 10px; color: rgba(255,255,255,0.6); }
     .mock-ig-caption { padding: 8px 12px 10px; color: var(--dk-muted); font-size: 11px; line-height: 1.5; }
     .mock-ig-caption strong { color: #f0f0ec; }
-
-    /* Mock: Video */
-    .mock-video { margin: 0 20px 20px; background: var(--dk); border: 1px solid var(--dk-border); border-radius: 14px; overflow: hidden; }
-    .mock-video-thumb { height: 180px; background: linear-gradient(135deg, #0d1520, #1a2d40, #0d1520); display: flex; align-items: center; justify-content: center; position: relative; }
-    .mock-video-thumb::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); }
-    .mock-video-thumb::after {
-      content: ''; position: absolute; bottom: 20px; left: 0; right: 0; height: 60px;
-      background: linear-gradient(180deg, #1a3a5c 0%, #0d2040 100%);
-      clip-path: polygon(0% 100%, 0% 60%, 5% 60%, 5% 30%, 12% 30%, 12% 50%, 18% 50%, 18% 20%, 25% 20%, 25% 45%, 32% 45%, 32% 10%, 38% 10%, 38% 45%, 44% 45%, 44% 30%, 50% 30%, 50% 55%, 56% 55%, 56% 35%, 62% 35%, 62% 15%, 68% 15%, 68% 40%, 74% 40%, 74% 25%, 80% 25%, 80% 50%, 86% 50%, 86% 60%, 92% 60%, 92% 70%, 100% 70%, 100% 100%);
-    }
-    .play-btn { width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; z-index: 1; }
-    .play-btn::after { content: '▶'; font-size: 14px; margin-left: 3px; color: #fff; }
-    .mock-video-meta { padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; }
-    .mock-video-title { font-size: 12px; font-weight: 600; color: #f0f0ec; }
-    .mock-video-tag { font-size: 10px; color: var(--gold); background: var(--golddim); padding: 2px 8px; border-radius: 4px; font-weight: 600; }
 
     /* Mock: Stats */
     .mock-stats { padding: 0 20px 20px; display: flex; flex-direction: column; gap: 10px; }
@@ -234,84 +140,95 @@
     .wa-bubble strong { color: #fff; }
     .wa-time { font-size: 9px; color: var(--dk-muted); text-align: right; margin-top: 4px; }
 
-    /* TRUST / OBJECTION SECTION */
-    .trust-section {
-      padding: 100px 48px;
+    /* PHOTO PLACEHOLDER */
+    .photo-slot {
+      border: 2px dashed var(--border2);
+      border-radius: 16px;
       background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; text-align: center; padding: 32px 20px;
+      color: var(--muted2);
     }
+    .photo-slot-icon { font-size: 28px; opacity: 0.35; }
+    .photo-slot-label { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .photo-slot-meta { font-size: 11px; color: var(--muted2); }
+
+    /* WORK SAMPLES */
+    .samples { padding: 0 48px 80px; max-width: 1240px; margin: 0 auto; }
+    .samples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    /* OBJECTION SECTION */
+    .trust-section { padding: 80px 48px; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .trust-section-inner { max-width: 1100px; margin: 0 auto; }
-    .trust-header { text-align: center; margin-bottom: 64px; }
-    .trust-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 54px); font-weight: 400; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
+    .trust-header { text-align: center; margin-bottom: 56px; }
+    .trust-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 400; line-height: 1.1; margin-bottom: 12px; }
     .trust-header h2 em { font-style: italic; color: var(--gold); }
-    .trust-header p { color: var(--muted); font-size: 17px; max-width: 520px; margin: 0 auto; line-height: 1.7; }
+    .trust-header p { color: var(--muted); font-size: 16px; }
     .trust-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .trust-col { padding: 32px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg); }
-    .trust-col-icon { font-size: 22px; margin-bottom: 16px; opacity: 0.7; }
-    .trust-col h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.3; }
-    .trust-col p { font-size: 14px; color: var(--muted); line-height: 1.85; }
+    .trust-col { padding: 28px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg); }
+    .trust-col-icon { font-size: 20px; margin-bottom: 14px; opacity: 0.6; }
+    .trust-col h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .trust-col p { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
     /* WHAT WE DON'T DO */
     .dont-section { padding: 80px 48px; max-width: 960px; margin: 0 auto; }
-    .dont-header { margin-bottom: 40px; }
-    .dont-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; margin-bottom: 10px; }
-    .dont-header p { color: var(--muted); font-size: 16px; }
-    .dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .dont-item { display: flex; gap: 14px; align-items: flex-start; padding: 20px 24px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
-    .dont-x { width: 22px; height: 22px; border-radius: 50%; background: var(--red-dim); color: var(--red); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
-    .dont-text h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-    .dont-text p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .dont-header { margin-bottom: 36px; }
+    .dont-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 400; margin-bottom: 8px; }
+    .dont-header p { color: var(--muted); font-size: 15px; }
+    .dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .dont-item { display: flex; gap: 12px; align-items: flex-start; padding: 18px 20px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+    .dont-x { width: 20px; height: 20px; border-radius: 50%; background: var(--red-dim); color: var(--red); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+    .dont-text h4 { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .dont-text p { font-size: 12px; color: var(--muted); line-height: 1.65; }
 
     /* HOW IT WORKS */
-    .simple { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
-    .simple-header { text-align: center; margin-bottom: 64px; }
-    .simple-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 54px); font-weight: 400; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
+    .simple { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
+    .simple-header { text-align: center; margin-bottom: 48px; }
+    .simple-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
     .simple-header h2 em { font-style: italic; color: var(--gold); }
-    .simple-sub { color: var(--muted); font-size: 17px; }
-    .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .step-box { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 32px; position: relative; }
-    .step-num { font-size: 12px; font-weight: 800; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; }
-    .step-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .step-box p { font-size: 14px; color: var(--muted); line-height: 1.85; }
-    .step-icon { position: absolute; top: 28px; right: 28px; font-size: 22px; opacity: 0.4; }
+    .simple-sub { color: var(--muted); font-size: 16px; }
+    .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .step-box { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 28px; position: relative; }
+    .step-num { font-size: 12px; font-weight: 800; color: var(--gold); letter-spacing: 1px; margin-bottom: 14px; }
+    .step-box h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .step-box p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+    .step-icon { position: absolute; top: 28px; right: 28px; font-size: 20px; opacity: 0.35; }
 
     /* PRICING */
-    .pricing { padding: 100px 48px; background: var(--surface); border-top: 1px solid var(--border); }
+    .pricing { padding: 80px 48px; background: var(--surface); border-top: 1px solid var(--border); }
     .pricing-inner { max-width: 1000px; margin: 0 auto; }
-    .pricing-header { text-align: center; margin-bottom: 56px; }
-    .pricing-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 54px); font-weight: 400; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .pricing-header { text-align: center; margin-bottom: 48px; }
+    .pricing-header h2 { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 4vw, 50px); font-weight: 400; margin-bottom: 10px; }
     .pricing-header h2 em { font-style: italic; color: var(--gold); }
-    .pricing-sub { color: var(--muted); font-size: 17px; }
+    .pricing-sub { color: var(--muted); font-size: 16px; }
     .pkg-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
-    .pkg { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: border-color 0.2s; }
+    .pkg { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 28px; transition: border-color 0.2s; }
     .pkg:hover { border-color: var(--border2); }
     .pkg.hot { border-color: var(--gold); background: var(--surface); }
-    .pkg-badge { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #000; padding: 3px 10px; border-radius: 100px; margin-bottom: 20px; }
-    .pkg-name { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-    .pkg-price { font-size: 38px; font-weight: 900; letter-spacing: -1px; margin-bottom: 4px; }
-    .pkg-price sub { font-size: 16px; font-weight: 500; color: var(--muted); vertical-align: baseline; }
-    .pkg-desc { font-size: 13px; color: var(--muted); margin-bottom: 24px; line-height: 1.75; }
-    .pkg-list { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px; }
-    .pkg-list li { font-size: 13px; display: flex; gap: 8px; align-items: baseline; color: var(--text); }
-    .pkg-list li::before { content: '↳'; color: var(--gold); flex-shrink: 0; font-size: 12px; }
-    .pkg-btn { display: block; text-align: center; padding: 13px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: all 0.15s; }
+    .pkg-badge { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #000; padding: 3px 10px; border-radius: 100px; margin-bottom: 16px; }
+    .pkg-name { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .pkg-price { font-size: 36px; font-weight: 900; letter-spacing: -1px; margin-bottom: 4px; }
+    .pkg-price sub { font-size: 15px; font-weight: 500; color: var(--muted); vertical-align: baseline; }
+    .pkg-desc { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.65; }
+    .pkg-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
+    .pkg-list li { font-size: 13px; display: flex; gap: 8px; align-items: baseline; }
+    .pkg-list li::before { content: '↳'; color: var(--gold); flex-shrink: 0; font-size: 11px; }
+    .pkg-btn { display: block; text-align: center; padding: 12px; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: all 0.15s; }
     .pkg-btn.solid { background: var(--text); color: var(--bg); }
     .pkg-btn.solid:hover { background: #2c2820; }
     .pkg-btn.outline { border: 1px solid var(--border2); color: var(--text); }
     .pkg-btn.outline:hover { border-color: var(--text); }
 
     /* CTA */
-    .cta-section { padding: 120px 48px; text-align: center; background: var(--text); }
-    .cta-section .overline { color: var(--gold); margin-bottom: 20px; display: block; }
-    .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5.5vw, 72px); font-weight: 400; letter-spacing: -1px; line-height: 1.0; margin-bottom: 20px; color: var(--bg); }
+    .cta-section { padding: 100px 48px; text-align: center; background: var(--text); }
+    .cta-section .overline { color: var(--gold); margin-bottom: 16px; display: block; }
+    .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(34px, 5vw, 66px); font-weight: 400; letter-spacing: -1px; line-height: 1.0; margin-bottom: 16px; color: var(--bg); }
     .cta-section h2 em { font-style: italic; color: var(--gold); }
-    .cta-section p { color: rgba(247,244,239,0.55); font-size: 16px; margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-    .btn-cta { background: var(--gold); color: #000; font-size: 15px; font-weight: 700; padding: 16px 32px; border-radius: 10px; text-decoration: none; transition: all 0.15s; display: inline-flex; align-items: center; gap: 8px; }
+    .cta-section p { color: rgba(247,244,239,0.5); font-size: 15px; margin-bottom: 36px; }
+    .btn-cta { background: var(--gold); color: #000; font-size: 15px; font-weight: 700; padding: 15px 30px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.15s; }
     .btn-cta:hover { background: var(--gold2); transform: translateY(-1px); }
-    .cta-note { font-size: 12px; color: rgba(247,244,239,0.35); margin-top: 16px; }
+    .cta-note { font-size: 12px; color: rgba(247,244,239,0.3); margin-top: 14px; }
 
-    /* SHARED */
     .overline { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
 
     /* FOOTER */
@@ -327,15 +244,16 @@
       .hero-btns { flex-direction: column; align-items: center; }
       .btn-primary, .btn-secondary { width: 100%; max-width: 360px; justify-content: center; }
       .trust-bar { gap: 16px; padding: 14px 20px; }
-      .showcase { padding: 48px 16px 60px; }
+      .showcase, .samples { padding: 48px 16px 60px; }
       .bento { grid-template-columns: 1fr; gap: 12px; }
       .b1,.b2,.b3,.b4,.b5,.b6,.b7 { grid-column: span 1; }
-      .trust-section, .simple, .pricing { padding: 64px 20px; }
-      .trust-cols { grid-template-columns: 1fr; gap: 16px; }
-      .dont-section { padding: 60px 20px; }
+      .samples-grid { grid-template-columns: 1fr; }
+      .trust-section, .simple, .pricing { padding: 56px 20px; }
+      .trust-cols { grid-template-columns: 1fr; gap: 12px; }
+      .dont-section { padding: 56px 20px; }
       .dont-grid { grid-template-columns: 1fr; }
-      .steps-row, .pkg-row { grid-template-columns: 1fr; gap: 16px; }
-      .cta-section { padding: 80px 20px; }
+      .steps-row, .pkg-row { grid-template-columns: 1fr; gap: 12px; }
+      .cta-section { padding: 72px 20px; }
       footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
     }
 
@@ -347,12 +265,11 @@
       h1 { letter-spacing: -0.5px; }
       .hero-sub { font-size: 15px; }
       .mock-ig-img { height: 130px; }
-      .mock-video-thumb { height: 150px; }
-      .trust-section, .simple, .pricing { padding: 52px 16px; }
+      .trust-section, .simple, .pricing { padding: 48px 16px; }
       .dont-section { padding: 48px 16px; }
-      .cta-section { padding: 64px 16px; }
-      .pkg { padding: 24px; border-radius: 16px; }
-      .pkg-price { font-size: 32px; }
+      .cta-section { padding: 60px 16px; }
+      .pkg { padding: 22px; }
+      .pkg-price { font-size: 30px; }
       footer { padding: 20px 16px; }
     }
 
@@ -382,7 +299,7 @@
       your listings <em>deserve.</em><br/>
       <span class="dim">Ready in 4 hours.</span>
     </h1>
-    <p class="hero-sub">Done-for-you listing videos, virtual staging, and social content — produced at speed, reviewed by humans, and built to close deals. Not just look good.</p>
+    <p class="hero-sub">Listing videos, staging, social content — produced at speed, reviewed by us. Built to close deals.</p>
     <div class="hero-btns">
       <a href="https://wa.me/6597121217?text=Hi%2C%20I'd%20like%20a%20free%20listing%20kit%20from%20District10" class="btn-primary" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.86L.057 23.986l6.304-1.654A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.804a9.793 9.793 0 01-5.012-1.374l-.36-.214-3.732.979 1-3.634-.234-.374A9.804 9.804 0 012.196 12C2.196 6.57 6.57 2.196 12 2.196c5.43 0 9.804 4.374 9.804 9.804 0 5.43-4.374 9.804-9.804 9.804z"/></svg>
@@ -408,21 +325,18 @@
   <div class="bento">
 
     <!-- B1: Instagram Post -->
-    <div class="bento-cell b1" style="height:620px;overflow:hidden;">
+    <div class="bento-cell b1" style="height:580px;overflow:hidden;">
       <div class="cell-label">Social Content</div>
       <div class="cell-title">Posted before your competitor wakes up.</div>
       <div class="mock-ig" id="b1-mock">
-        <img id="ig-post-img" src="assets/ig-post.png" alt="Sample Instagram post"
+        <img src="assets/ig-post.png" alt="Sample Instagram post"
           style="width:100%;border-radius:10px;display:none;margin-top:-52px;"
           onload="this.style.display='block';document.getElementById('b1-mock-inner').style.display='none';"
           onerror="this.style.display='none';" />
         <div id="b1-mock-inner">
           <div class="mock-ig-header">
             <div class="mock-avatar">JL</div>
-            <div>
-              <div class="mock-ig-name">jasonlim.property</div>
-              <div class="mock-ig-sub">PropNex Realty · Singapore</div>
-            </div>
+            <div><div class="mock-ig-name">jasonlim.property</div><div class="mock-ig-sub">PropNex Realty · Singapore</div></div>
           </div>
           <div class="mock-ig-img">
             <div class="mock-property-visual">
@@ -432,57 +346,57 @@
             </div>
           </div>
           <div class="mock-ig-caption">
-            <strong>Unobstructed city views from the 28th floor.</strong> Rare 5-room in Bishan with full renovation, 2 carpark lots included. First to enquire gets first look. 🔑<br/>
+            <strong>Unobstructed city views from the 28th floor.</strong> Rare 5-room in Bishan, fully renovated. First to enquire gets first look. 🔑<br/>
             <span style="color:var(--gold)">#BiShan #PropNex #SingaporeProperty</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- B2: Head-to-head comparison -->
-    <div class="bento-cell b2" style="height:620px;overflow:hidden;display:flex;flex-direction:column;">
+    <!-- B2: Traditional vs District10 -->
+    <div class="bento-cell b2" style="height:580px;overflow:hidden;display:flex;flex-direction:column;">
       <div class="cell-label">Speed = Commission</div>
       <div class="cell-title">Every hour your listing isn't up is a buyer seeing someone else's.</div>
       <div style="display:grid;grid-template-columns:1fr 1px 1fr;flex:1;margin:0 20px;">
         <div style="padding:20px 20px 20px 0;display:flex;flex-direction:column;justify-content:space-between;">
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#ef4444;margin-bottom:12px;">Traditional</div>
-            <div style="font-size:88px;font-weight:900;letter-spacing:-4px;color:#ef4444;line-height:1;">7</div>
-            <div style="font-size:14px;color:var(--dk-muted);margin-top:4px;">days for a video</div>
+            <div style="font-size:80px;font-weight:900;letter-spacing:-4px;color:#ef4444;line-height:1;">7</div>
+            <div style="font-size:13px;color:var(--dk-muted);margin-top:4px;">days for a video</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:12px;padding-bottom:20px;">
+          <div style="display:flex;flex-direction:column;gap:10px;padding-bottom:20px;">
             <div style="height:1px;background:var(--dk-border);margin-bottom:4px;"></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Listing video</span><span style="color:#ef4444;font-weight:600;">S$1,500</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Virtual staging</span><span style="color:#ef4444;font-weight:600;">S$80/img</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Social content</span><span style="color:#ef4444;font-weight:600;">S$2,500/mo</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Vendors to chase</span><span style="color:#ef4444;font-weight:600;">5+</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Listing video</span><span style="color:#ef4444;font-weight:600;">S$1,500</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Virtual staging</span><span style="color:#ef4444;font-weight:600;">S$80/img</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Social content</span><span style="color:#ef4444;font-weight:600;">S$2,500/mo</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Vendors to chase</span><span style="color:#ef4444;font-weight:600;">5+</span></div>
           </div>
         </div>
         <div style="background:var(--dk-border);"></div>
         <div style="padding:20px 0 20px 20px;display:flex;flex-direction:column;justify-content:space-between;">
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">District10</div>
-            <div style="font-size:88px;font-weight:900;letter-spacing:-4px;color:var(--gold);line-height:1;">4</div>
-            <div style="font-size:14px;color:var(--dk-muted);margin-top:4px;">hours, same day</div>
+            <div style="font-size:80px;font-weight:900;letter-spacing:-4px;color:var(--gold);line-height:1;">4</div>
+            <div style="font-size:13px;color:var(--dk-muted);margin-top:4px;">hours, same day</div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:12px;padding-bottom:20px;">
+          <div style="display:flex;flex-direction:column;gap:10px;padding-bottom:20px;">
             <div style="height:1px;background:var(--dk-border);margin-bottom:4px;"></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Listing video</span><span style="color:#3ecf8e;font-weight:600;">Included</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Virtual staging</span><span style="color:#3ecf8e;font-weight:600;">Included</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Social content</span><span style="color:#3ecf8e;font-weight:600;">Included</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:13px;"><span style="color:var(--dk-muted);">Vendors to chase</span><span style="color:#3ecf8e;font-weight:600;">1 WhatsApp</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Listing video</span><span style="color:#3ecf8e;font-weight:600;">Included</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Virtual staging</span><span style="color:#3ecf8e;font-weight:600;">Included</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Social content</span><span style="color:#3ecf8e;font-weight:600;">Included</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--dk-muted);">Vendors to chase</span><span style="color:#3ecf8e;font-weight:600;">1 WhatsApp</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- B3: Cost Stat -->
-    <div class="bento-cell b3" style="height:440px;overflow:hidden;">
-      <div class="cell-label">What you're overpaying for</div>
-      <div class="cell-title">Every. Single. Month.</div>
+    <!-- B3: Cost breakdown -->
+    <div class="bento-cell b3" style="height:420px;overflow:hidden;">
+      <div class="cell-label">What you're overpaying</div>
+      <div class="cell-title">Every month.</div>
       <div class="mock-stats">
         <div class="mock-stat-row">
-          <div><div class="mock-stat-label">Listing video</div><div style="font-size:11px;color:#52525e;text-decoration:line-through">S$800–S$2,000</div></div>
+          <div><div class="mock-stat-label">Listing video</div><div style="font-size:11px;color:#52525e;text-decoration:line-through">S$800–2,000</div></div>
           <div class="mock-stat-val gold">Included</div>
         </div>
         <div class="mock-stat-row">
@@ -501,8 +415,8 @@
     </div>
 
     <!-- B4: Before/After Staging -->
-    <div class="bento-cell b4" style="height:440px;overflow:hidden;">
-      <div class="cell-label">Virtual Staging — S$0 extra</div>
+    <div class="bento-cell b4" style="height:420px;overflow:hidden;">
+      <div class="cell-label">Virtual Staging</div>
       <div class="cell-title">S$80/image elsewhere. Included here.</div>
       <div style="margin:0 20px 20px;border-radius:14px;overflow:hidden;position:relative;height:200px;display:flex;">
         <div style="width:50%;position:relative;overflow:hidden;">
@@ -519,13 +433,13 @@
       </div>
     </div>
 
-    <!-- B5: WhatsApp Script -->
-    <div class="bento-cell b5" style="height:440px;overflow:hidden;">
+    <!-- B5: WhatsApp -->
+    <div class="bento-cell b5" style="height:420px;overflow:hidden;">
       <div class="cell-label">WhatsApp Scripts</div>
-      <div class="cell-title">The right message at the right time closes deals.</div>
+      <div class="cell-title">The right message at the right time.</div>
       <div class="mock-wa">
         <img src="assets/wa-screenshot.png" alt="WhatsApp broadcast"
-          style="width:100%;border-radius:0 0 10px 10px;display:none;"
+          style="width:100%;display:none;"
           onload="this.style.display='block';document.getElementById('b5-mock-inner').style.display='none';"
           onerror="this.style.display='none';" />
         <div id="b5-mock-inner">
@@ -535,7 +449,7 @@
           </div>
           <div class="mock-wa-body">
             <div class="wa-bubble">
-              Hi [Name], a rare opportunity just came in — <strong>5-room Bishan with unobstructed views</strong>, fully renovated, S$1.28M.<br/><br/>Only showing to 3 qualified buyers this weekend. Are you still in the market?
+              Hi [Name], a rare opportunity just came in — <strong>5-room Bishan with unobstructed views</strong>, fully renovated, S$1.28M.<br/><br/>Only showing to 3 buyers this weekend. Are you still in the market?
               <div class="wa-time">10:32 AM ✓✓</div>
             </div>
           </div>
@@ -544,47 +458,43 @@
     </div>
 
     <!-- B6: Listing Video -->
-    <div class="bento-cell b6" style="height:480px;overflow:hidden;position:relative;">
+    <div class="bento-cell b6" style="height:460px;overflow:hidden;position:relative;">
       <div style="position:absolute;top:0;left:0;right:0;z-index:3;padding:16px 20px;background:linear-gradient(180deg,rgba(0,0,0,0.7) 0%,transparent 100%);">
-        <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px;">Listing Video — delivered in 4 hours</div>
-        <div style="font-size:17px;font-weight:700;color:#fff;">Your S$1,500 videographer. For S$380. Today.</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px;">Listing Video · 4 hours</div>
+        <div style="font-size:16px;font-weight:700;color:#fff;">Your S$1,500 videographer. For S$380. Today.</div>
       </div>
       <video src="assets/listing-video.mp4" poster="assets/listing-thumb.png" controls playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;"></video>
       <div style="position:absolute;bottom:0;left:0;right:0;z-index:3;padding:12px 16px;background:linear-gradient(0deg,rgba(0,0,0,0.85) 0%,transparent 100%);display:flex;align-items:center;justify-content:space-between;">
         <div>
-          <div style="font-size:12px;font-weight:600;color:#fff;">Full Property Walkthrough · AI-produced</div>
-          <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">Branded · CEA-compliant · Human-reviewed</div>
+          <div style="font-size:11px;font-weight:600;color:#fff;">AI-produced · Human-reviewed</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">Branded · CEA-compliant</div>
         </div>
         <span style="background:var(--gold);color:#000;font-size:10px;font-weight:800;padding:4px 10px;border-radius:4px;">READY</span>
       </div>
     </div>
 
     <!-- B7: Flyer -->
-    <div class="bento-cell b7" style="height:480px;overflow:hidden;position:relative;">
-      <div style="position:relative;width:100%;height:100%;min-height:380px;">
+    <div class="bento-cell b7" style="height:460px;overflow:hidden;position:relative;">
+      <div style="position:relative;width:100%;height:100%;">
         <img src="assets/staging-after.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.15) 40%,rgba(0,0,0,0.85) 100%);"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.1) 40%,rgba(0,0,0,0.85) 100%);"></div>
         <div style="position:absolute;top:0;left:0;right:0;background:var(--gold);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;z-index:2;">
           <span style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#000;">Open House</span>
           <span style="font-size:10px;font-weight:800;color:#000;">Sat, 10am – 12pm</span>
         </div>
-        <div style="position:absolute;top:36px;right:16px;z-index:2;margin-top:8px;">
-          <span style="background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:9px;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:4px;text-transform:uppercase;">For Sale</span>
-        </div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;z-index:2;">
-          <div style="font-size:28px;font-weight:900;letter-spacing:-1px;color:#fff;line-height:1;margin-bottom:4px;">S$1.28M</div>
-          <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:2px;">Bishan St 22 · 5-Room HDB</div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.55);margin-bottom:14px;">Blk 123 · #28-456 · 1,291 sqft · High Floor</div>
-          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">
-            <span style="background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">City View</span>
-            <span style="background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">Renovated</span>
-            <span style="background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">Near MRT</span>
-            <span style="background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">Freehold</span>
+          <div style="font-size:26px;font-weight:900;letter-spacing:-1px;color:#fff;line-height:1;margin-bottom:4px;">S$1.28M</div>
+          <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:2px;">Bishan St 22 · 5-Room HDB</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:12px;">1,291 sqft · High Floor · Renovated</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
+            <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">City View</span>
+            <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">Near MRT</span>
+            <span style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:9px;font-weight:600;padding:3px 8px;border-radius:4px;">Freehold</span>
           </div>
           <div style="height:1px;background:rgba(255,255,255,0.15);margin-bottom:12px;"></div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="display:flex;align-items:center;gap:10px;">
-              <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#6b4f1a);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#000;flex-shrink:0;border:2px solid rgba(255,255,255,0.3);">JL</div>
+              <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#6b4f1a);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#000;border:2px solid rgba(255,255,255,0.3);">JL</div>
               <div><div style="font-size:12px;font-weight:700;color:#fff;">Jason Lim</div><div style="font-size:10px;color:rgba(255,255,255,0.5);">PropNex · CEA R012345A</div></div>
             </div>
             <div style="background:var(--gold);color:#000;font-size:10px;font-weight:800;padding:6px 12px;border-radius:6px;">+65 9XXX XXXX</div>
@@ -596,29 +506,55 @@
   </div>
 </section>
 
+<!-- REAL WORK SAMPLES — photo placeholders -->
+<section class="samples">
+  <span class="section-label">Real work</span>
+  <div class="samples-grid">
+
+    <div class="photo-slot" style="height:280px;">
+      <div class="photo-slot-icon">🏠</div>
+      <div class="photo-slot-label">Staging sample</div>
+      <div class="photo-slot-meta">Upload a real before/after from a client listing<br/>Recommended: 1200 × 800px</div>
+    </div>
+
+    <div class="photo-slot" style="height:280px;">
+      <div class="photo-slot-icon">📱</div>
+      <div class="photo-slot-label">Social post screenshot</div>
+      <div class="photo-slot-meta">A real IG or FB post we produced<br/>Recommended: 1080 × 1080px</div>
+    </div>
+
+    <div class="photo-slot" style="height:280px;">
+      <div class="photo-slot-icon">🎬</div>
+      <div class="photo-slot-label">Video thumbnail</div>
+      <div class="photo-slot-meta">Thumbnail from a real listing video<br/>Recommended: 1280 × 720px</div>
+    </div>
+
+  </div>
+</section>
+
 <!-- OBJECTION BUSTING -->
 <section class="trust-section">
   <div class="trust-section-inner">
     <div class="trust-header">
-      <div class="overline" style="margin-bottom:16px;">How we think about AI</div>
+      <div class="overline" style="margin-bottom:14px;">How we think about AI</div>
       <h2>AI should make you look <em>better.</em><br/>Not replace you.</h2>
-      <p>Property is a long-term trust business. The agents who close consistently aren't the ones with the flashiest tech — they're the ones clients trust. We build marketing that earns that trust.</p>
+      <p>Property is a trust business. We build marketing that earns it.</p>
     </div>
     <div class="trust-cols">
       <div class="trust-col">
         <div class="trust-col-icon">✦</div>
         <h3>Quality you can put your name on</h3>
-        <p>Every piece of content — video, staging, caption, script — is reviewed by us before it reaches you. AI handles the production speed. Humans handle the quality bar. If it's not good enough to close a deal, it doesn't go out.</p>
+        <p>AI produces. We check. Every deliverable is reviewed before it reaches you — if it won't close a deal, it doesn't leave.</p>
       </div>
       <div class="trust-col">
         <div class="trust-col-icon">◈</div>
-        <h3>Your brand. Your voice. Your relationships.</h3>
-        <p>Property clients choose agents, not agencies. Your trust with buyers and sellers took years to build. We don't automate your relationships — we give you better tools to nurture them. The marketing looks like you, sounds like you, and performs for you.</p>
+        <h3>Your brand. Your voice.</h3>
+        <p>Your trust with clients took years to build. The marketing looks like you, sounds like you. Nothing gets automated that shouldn't be.</p>
       </div>
       <div class="trust-col">
         <div class="trust-col-icon">◎</div>
-        <h3>Marketers first. AI is how we work faster.</h3>
-        <p>We've spent years running marketing — across industries, across channels, across budgets. We know what makes content convert. AI is how we deliver that expertise at a price point that used to require a full in-house team. The thinking is human. The speed is not.</p>
+        <h3>Marketers first.</h3>
+        <p>We've spent years running marketing across industries. AI is how we deliver that faster and cheaper — the thinking is still human.</p>
       </div>
     </div>
   </div>
@@ -627,37 +563,37 @@
 <!-- WHAT WE DON'T DO -->
 <section class="dont-section">
   <div class="dont-header">
-    <div class="overline" style="margin-bottom:12px;">Where we draw the line</div>
+    <div class="overline" style="margin-bottom:10px;">Where we draw the line</div>
     <h2>What we don't do.</h2>
-    <p>Some agencies use AI to cut corners. We use it to raise the bar. Here's where we draw the line.</p>
+    <p>Some agencies use AI to cut corners. We use it to raise the bar.</p>
   </div>
   <div class="dont-grid">
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
         <h4>No AI-generated agent avatars</h4>
-        <p>Fake digital personas erode the trust that closes deals. Your face, your name, your credibility — those stay real.</p>
+        <p>Your face and name are not a marketing asset we get to automate.</p>
       </div>
     </div>
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
-        <h4>No templated captions that look like a bot wrote them</h4>
-        <p>Generic AI captions make agents look lazy. Every caption is written for your specific listing, your specific buyer.</p>
+        <h4>No templated captions</h4>
+        <p>Every caption is written for your specific listing, not pulled from a library.</p>
       </div>
     </div>
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
-        <h4>No content that risks your CEA standing</h4>
-        <p>Every deliverable is checked for CEA compliance before it reaches you. Your licence is not worth a faster turnaround.</p>
+        <h4>No shortcuts on CEA compliance</h4>
+        <p>Your licence is not worth a faster turnaround.</p>
       </div>
     </div>
     <div class="dont-item">
       <div class="dont-x">✕</div>
       <div class="dont-text">
-        <h4>No unreviewed content leaving our desk</h4>
-        <p>We don't ship raw AI output. Human eyes on every deliverable, every time. That's the whole point of what we do.</p>
+        <h4>No unreviewed output</h4>
+        <p>Human eyes on every deliverable, every time.</p>
       </div>
     </div>
   </div>
@@ -666,28 +602,28 @@
 <!-- HOW IT WORKS -->
 <section class="simple">
   <div class="simple-header">
-    <div class="overline" style="margin-bottom:16px;">How it works</div>
+    <div class="overline" style="margin-bottom:14px;">How it works</div>
     <h2>Faster than chasing<br/>your <em>photographer.</em></h2>
-    <p class="simple-sub">No briefing calls. No revision loops. No follow-ups. Just WhatsApp.</p>
+    <p class="simple-sub">No briefing calls. No revision loops. Just WhatsApp.</p>
   </div>
   <div class="steps-row">
     <div class="step-box">
       <div class="step-num">01</div>
       <div class="step-icon">💬</div>
       <h3>Send us your listing</h3>
-      <p>Drop the URL, photos, or a voice note on WhatsApp. Tell us who the buyer is. That's the entire brief.</p>
+      <p>Drop the URL, photos, or a voice note on WhatsApp. That's the entire brief.</p>
     </div>
     <div class="step-box">
       <div class="step-num">02</div>
       <div class="step-icon">⚡</div>
       <h3>We produce. We check.</h3>
-      <p>AI generates at speed — video, staging, copy, flyer. Then we review every piece for quality and CEA compliance before it leaves our desk.</p>
+      <p>AI generates at speed. We review for quality and CEA compliance before it leaves.</p>
     </div>
     <div class="step-box">
       <div class="step-num">03</div>
       <div class="step-icon">📲</div>
-      <h3>Live in 4 hours. Closed faster.</h3>
-      <p>First listing up wins the lead. Agents who market faster close faster — every day a listing sits unmarketed is commission left on the table.</p>
+      <h3>Live in 4 hours.</h3>
+      <p>First listing up wins the lead. Every day unmarketed is commission left behind.</p>
     </div>
   </div>
 </section>
@@ -696,16 +632,16 @@
 <section class="pricing" id="pricing">
   <div class="pricing-inner">
     <div class="pricing-header">
-      <div class="overline" style="margin-bottom:16px;">Pricing</div>
+      <div class="overline" style="margin-bottom:14px;">Pricing</div>
       <h2>Less than one videographer.<br/><em>Everything</em> else included.</h2>
-      <p class="pricing-sub">No lock-in. No retainer trap. Start with a single listing.</p>
+      <p class="pricing-sub">No lock-in. Start with a single listing.</p>
     </div>
     <div class="pkg-row">
 
       <div class="pkg">
         <div class="pkg-name">Per Listing</div>
         <div class="pkg-price">S$380 <sub>/ listing</sub></div>
-        <p class="pkg-desc">One listing. Full kit. Live in 4 hours. Try it before you commit to anything.</p>
+        <p class="pkg-desc">One listing. Full kit. Live in 4 hours.</p>
         <ul class="pkg-list">
           <li>1 branded listing video</li>
           <li>5 virtual staging images</li>
@@ -721,7 +657,7 @@
         <div class="pkg-badge">Most Popular</div>
         <div class="pkg-name">Agent Growth</div>
         <div class="pkg-price">S$1,800 <sub>/ mo</sub></div>
-        <p class="pkg-desc">Every listing marketed in 4 hours. Consistent presence without the consistent overhead.</p>
+        <p class="pkg-desc">Every listing marketed. Consistent presence, without the overhead.</p>
         <ul class="pkg-list">
           <li>20 social posts/month</li>
           <li>4 listing videos/month</li>
@@ -738,7 +674,7 @@
       <div class="pkg">
         <div class="pkg-name">Team Leader</div>
         <div class="pkg-price">S$3,500 <sub>/ mo</sub></div>
-        <p class="pkg-desc">Listings closing faster. Recruits seeing a team that looks like a winner. Both handled for you.</p>
+        <p class="pkg-desc">Listings and recruitment handled. Both drive your income.</p>
         <ul class="pkg-list">
           <li>Everything in Agent Growth</li>
           <li>2 recruitment videos/month</li>
@@ -759,12 +695,12 @@
 <section class="cta-section">
   <span class="overline">4 hours to live. Faster to close.</span>
   <h2>Every day you wait<br/>is a deal you <em>don't</em> close.</h2>
-  <p>Send us one listing. Full kit in 4 hours — free. See what faster marketing does for your next commission.</p>
+  <p>First listing kit is free. No commitment. Just WhatsApp us the listing.</p>
   <a href="https://wa.me/6597121217?text=Hi%2C%20I'd%20like%20a%20free%20listing%20kit%20from%20District10" class="btn-cta" target="_blank">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.86L.057 23.986l6.304-1.654A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.804a9.793 9.793 0 01-5.012-1.374l-.36-.214-3.732.979 1-3.634-.234-.374A9.804 9.804 0 012.196 12C2.196 6.57 6.57 2.196 12 2.196c5.43 0 9.804 4.374 9.804 9.804 0 5.43-4.374 9.804-9.804 9.804z"/></svg>
     WhatsApp your listing
   </a>
-  <div class="cta-note">Replied within 2 hours · Mon–Sat 9am–9pm SGT · All content is CEA-compliant</div>
+  <div class="cta-note">Replied within 2 hours · Mon–Sat 9am–9pm SGT · CEA-compliant</div>
 </section>
 
 <!-- FOOTER -->
