@@ -1,0 +1,45 @@
+# District10
+
+> District10 is a full-service property marketing agency for Singapore real estate agents. We produce listing videos, virtual staging, social media content, and WhatsApp broadcast scripts — delivered in 4 hours, human-reviewed, and CEA-compliant.
+
+## What We Do
+
+District10 produces the complete marketing kit for a property listing:
+- **Listing video** — cinematic walkthrough video for PropertyGuru, social, and WhatsApp
+- **Virtual staging** — AI-staged room photos that show buyer potential without physical furniture
+- **Instagram / social posts** — caption, hashtags, and creative ready to post
+- **WhatsApp broadcast script** — personalised message ready to send to your contact list
+- **Open house flyer** — print-ready PDF designed to your listing
+
+## Who We Serve
+
+Singapore licensed property agents (CEA-registered) selling HDB, condo, landed, and commercial listings.
+
+## Key Facts
+
+- Delivery time: 4 hours from briefing
+- Cost: ~70% less than traditional marketing vendors
+- CEA compliance: all output reviewed before delivery
+- First listing kit: free
+- Contact: +65 9712 1217 (WhatsApp)
+
+## Pricing
+
+See /pricing.md for structured pricing data.
+
+## Content
+
+- Blog: https://district10.io/blog
+- About: https://district10.io/about
+
+## Key Pages
+
+- Homepage: https://district10.io/
+- Blog index: https://district10.io/blog
+- About: https://district10.io/about
+- Virtual Staging guide: https://district10.io/blog/virtual-staging-vs-home-staging-singapore
+- Listing Video guide: https://district10.io/blog/listing-video-singapore-property
+- WhatsApp guide: https://district10.io/blog/whatsapp-broadcast-property-agent-singapore
+- Social Media guide: https://district10.io/blog/social-media-content-guide-singapore-property-agents
+- HDB vs Condo guide: https://district10.io/blog/hdb-vs-condo-listing-marketing-singapore
+- How to market a listing: https://district10.io/blog/how-to-market-property-listing-singapore
