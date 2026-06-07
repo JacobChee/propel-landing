@@ -249,8 +249,8 @@
     .overline { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
 
     /* FOOTER */
-    footer { border-top: 1px solid rgba(247,244,239,0.1); padding: 28px 48px; background: var(--text); display: flex; align-items: center; justify-content: space-between; color: rgba(247,244,239,0.4); font-size: 12px; flex-wrap: wrap; gap: 12px; }
-    footer a { color: rgba(247,244,239,0.5); text-decoration: none; transition: color 0.15s; }
+    footer { border-top: 1px solid rgba(247,244,239,0.1); background: var(--text); display: flex; color: rgba(247,244,239,0.4); font-size: 13px; }
+    footer a { color: rgba(247,244,239,0.5); text-decoration: none; transition: color 0.15s; font-size: 13px; }
     footer a:hover { color: var(--bg); }
 
     /* RESPONSIVE */
@@ -698,13 +698,48 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <a href="index.html" style="font-family:'DM Serif Display',serif;font-size:18px;color:var(--bg);text-decoration:none;">district<span style="color:var(--gold)">10</span></a>
-  <span>Done-for-you AI marketing for Singapore property agents</span>
-  <div style="display:flex;gap:24px;">
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="#pricing">Pricing</a>
+<footer style="flex-direction:column;align-items:flex-start;gap:28px;padding:40px 48px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap;gap:20px;">
+    <a href="index.html" style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--bg);text-decoration:none;">district<span style="color:var(--gold)">10</span></a>
+    <span style="font-size:13px;">Done-for-you AI marketing for Singapore property agents</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px;width:100%;">
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(247,244,239,0.3);margin-bottom:12px;">Company</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(247,244,239,0.3);margin-bottom:12px;">Comparisons</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="alternatives/boxbrownie.html">vs BoxBrownie</a>
+        <a href="alternatives/postai.html">vs PostAI</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(247,244,239,0.3);margin-bottom:12px;">Guides</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="blog/virtual-staging-vs-home-staging-singapore.html">Virtual Staging Guide</a>
+        <a href="blog/listing-video-singapore-property.html">Listing Video Guide</a>
+        <a href="blog/best-property-marketing-tools-singapore-agents.html">Best Tools (2026)</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(247,244,239,0.3);margin-bottom:12px;">Contact</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="https://wa.me/6597121217" target="_blank">WhatsApp Us</a>
+        <a href="https://wa.me/6597121217?text=Hi%2C%20I%27d%20like%20a%20free%20listing%20kit" target="_blank">Free First Kit</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid rgba(247,244,239,0.1);padding-top:20px;width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 District10</span>
+    <span>Singapore CEA-compliant property marketing</span>
   </div>
 </footer>
 
